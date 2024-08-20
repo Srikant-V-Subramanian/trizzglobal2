@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trizz Global</title>
+  <link href="navbar.css" rel="stylesheet">
+
+  <style>
+    h1 {
+      color: white;
+    }
+
+    nav {
+      overflow-x: hidden;
+      height: 10vh;
+    }
+
+    body {
+      background-color: inherit;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    main {
+      background-color: #036348;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+    }
+
+    .team>h3 {
+      text-wrap: wrap;
+      font-size: 50px;
+    }
+
+    .team>.ourTeamHead {
+      margin: auto;
+      text-align: center;
+      color: #ffffff;
+      font-family: Berlin Sans FB;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .ourTeamHead::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      margin-top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .ourTeamHead:hover::after {
+      width: 30%;
+      right: 0;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      margin: 50px auto;
+    }
+
+    .team {
+      width: 25vw;
+      background-color: #0000007a;
+      padding: 10px 30px;
+      margin: 1rem 20px;
+      border-radius: 10px;
+      border: 0.1em solid yellow;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .team:hover {
+      transform: scale(1.05);
+
+    }
+
+    .team img {
+
+      padding: 20px;
+      width: 120px;
+      transition: transform .7s ease-in-out;
+      transition: width 0.5s ease;
+
+    }
+
+    .team figure img {
+      -webkit-transform: rotate(0) scale(1);
+      transform: rotate(0) scale(1);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    .team figure:hover img {
+
+      -webkit-transform: rotate(15deg) scale(1.4);
+      transform: rotate(15deg) scale(1.4);
+    }
+
+
+    .team h3 {
+      color: #ffffff;
+      margin-bottom: 0px;
+      font-size: 2rem;
+      font-family: Bahnschrift SemiBold;
+      padding-bottom: 10px;
+    }
+
+
+    .View-button {
+      background-color: transparent;
+      border: 2px solid #8AD6B7;
+      color: #8AD6B7;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 8px 2px;
+      cursor: pointer;
+      border-radius: 50px;
+      overflow: hidden;
+      position: relative;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+
+
+
+
+    .View-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 0;
+      height: 100%;
+      background-color: #8AD6B7;
+      z-index: -1;
+      transition: width 0.4s ease;
+      transform: translateX(-50%);
+    }
+
+    .View-button:hover::before {
+      width: 100%;
+    }
+
+    .View-button:hover {
+      color: #036348;
+      background-color: #8AD6B7;
+    }
+
+    @media only screen and (max-width: 1078px) {
+      .team {
+        width: 40vw;
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+    @media only screen and (max-width: 720px) {
+      .team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .team {
+        width: 70vw;
+
+      }
+
+      .team>figure>img {
+        width: 30vw;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <header style="position: sticky;">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/nethrabalan/trizzbeta/main/static/trizz_logo.png"
+        alt="Trizz Global Logo">
+      <div class="logo-name" style="color: #000000; font-family: 'Lucida Sans'; font-size: 50px; font-weight: 200;">
+        Trizz</div> <!-- Replace "Your Name" with the desired name -->
+    </div>
+
+    <nav>
+
+      <ul class="nav-links">
+        <li><a href="/homepage.html" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+        <li><a href="/aboutuspage.html" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+        <li><a href="/team_overview.html" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+        <li><a href="/gallery_page.html" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+        <li>
+          <a href="/loginpage.html">
+            <button>Login
+              <span></span><span></span><span></span><span></span>
+            </button>
+          </a>
+        </li>
+      </ul>
+
+      <button class="menu-icon"><i class="fa-solid fa-4x fa-bars"></i></button>
+
+    </nav>
+
+
+    <script src="https://kit.fontawesome.com/7112b057d4.js" crossorigin="anonymous"></script>
+
+  </header>
+
+  <script>
+    const nav = document.querySelector(".nav-links");
+    const burger = document.querySelector(".menu-icon");
+    const links = nav.querySelectorAll("li");
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-open");
+    });
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+
+      })
+    });
+
+  </script>
+
+
+  <main>
+    <h1 class="ourTeamHead">Our Teams</h1>
+
+    <div class="team-container">
+      <div class="team">
+        <figure><img src="https://raw.githubusercontent.com/nethrabalan/trizzbeta/main/static/devops_icon.png"
+            alt="Team 3 Icon"></figure>
+        <h3>DevOPS<br> <span style="font-size: 1.5rem;">Team</span></h3>
+        <h3 style="font-size: 1rem;">Headed By - Raja Murugesan (XII C)</h3>
+        <a href="devops_members.html"><button class="View-button">View Team</button></a>
+      </div>
+      <div class="team">
+        <figure> <img src="https://raw.githubusercontent.com/nethrabalan/trizzbeta/main/static/globaloutreach_icon.png"
+            alt="Team 3 Icon"></figure>
+        <h3>Global Outreach<br> <span style="font-size: 1.5rem;">Team</span></h3>
+        <h3 style="font-size: 1rem;">Headed By - Akhilesh.J.C (XI D)</h3>
+        <a href="globaloutreach_members.html"><button class="View-button">View Team</button></a>
+      </div>
+      <div class="team">
+        <figure> <img src="https://raw.githubusercontent.com/nethrabalan/trizzbeta/main/static/coreteam_icon.png"
+            alt="Team 3 Icon"></figure>
+        <h3>Core<br> <span style="font-size: 1.5rem;">Team</span></h3>
+        <h3 style="font-size: 1rem;">Headed By - Tejashwin (XII D)</h3>
+        <a href="coreteam_members.html"><button class="View-button">View Team</button></a>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+
+</html>

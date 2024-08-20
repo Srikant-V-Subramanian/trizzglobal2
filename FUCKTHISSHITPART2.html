@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    /* external css: flickity.css */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    /* prevent vertical scroll bar glitch */
+    html {
+        overflow-y: scroll;
+    }
+
+    .carousel {
+        background: #EEE;
+        width: 75vw;
+        height: 75vh;
+    }
+
+
+    .carousel-cell {
+        width: 75vw;
+        height: 75vh;
+        margin-right: 10px;
+        background: #8C8;
+        border-radius: 5px;
+        counter-increment: gallery-cell;
+    }
+</style>
+
+<body>
+
+
+    <h1>Flickity - full-width cells</h1>
+
+    <!-- Flickity HTML init -->
+    <div class="carousel" data-flickity>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+    </div>
+
+
+
+</body>
+
+<script>
+    // external js: flickity.pkgd.js
+
+    var $carousel = $('.carousel').flickity();
+
+    $carousel.on('staticClick.flickity', function (event, pointer, cellElement, cellIndex) {
+        if (typeof cellIndex == 'number') {
+            $carousel.flickity('selectCell', cellIndex);
+        }
+    });
+
+</script>
+
+
+</html>
